@@ -1,0 +1,26 @@
+server:
+  port: 8888
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+spring:
+  data:
+    mongodb:
+      pro:
+        # 档案馆正式环境MongoDB
+        uri: mongodb://dag:dag201905@127.0.0.1:27020/DAGDB
+      dev:
+        # 档案馆测试环境MongoDB
+        uri: mongodb://dag:dag201905@127.0.0.1:27020/DAGDB
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9330
+      cluster-name: pa-platf
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML5
